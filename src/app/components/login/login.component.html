@@ -6,10 +6,13 @@
   <h1>Connection to the app</h1>
   <p>Sign-in with your email</p>
 
+  <p *ngIf='alertConnection' class="alert-red">Email and password not matching</p>
+  <p *ngIf='alertEmail' class="alert-red">Email missing</p>
   <input type="email" name="email" id="email" placeholder="emma.yonnaise@stud.be" aria-label="email" required >
+  <p *ngIf='alertPassword' class="alert-red">Password missing</p>
   <input type="password" name="password" id="password" placeholder="password" aria-label="password" required >
 
-  <button type="button">Connection</button>
+  <button type="button" (click)="login()">Connection</button>
 </form>
 
 <section class="separator">
@@ -18,4 +21,4 @@
   <hr />
 </section>
 
-<button type="button">New user</button>
+<button type="button" (click)="register()">New user</button>
