@@ -1,1 +1,98 @@
 /* You can add global styles to this file, and also import other style files */
+
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+// Colors var
+$red: #EB4335;
+$black: #000;
+$white: #fff;
+$lightgrey: #E0E0E0;
+$middlegrey: #828282;
+
+// Style
+body {
+  font-family: Inter;
+}
+
+main {
+  margin: 10dvh 2dvw;
+}
+
+#connection {
+  margin-top: 10dvh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  input {
+    height: 4dvh;
+    border-radius: 8px;
+    border: $lightgrey 1px solid;
+    margin: 1dvh 0;
+    // padding: 0 1dvw;
+  }
+
+  button {
+    background: $black;
+    color: $white;
+  }
+}
+
+button {
+  height: 4dvh;
+  width: 100%;
+  border-radius: 8px;
+  border:none;
+  margin: 1dvh 0;
+  background: $lightgrey;
+  color: $black;
+}
+
+.separator {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.8rem;
+  color: $middlegrey;
+  justify-content: center;
+
+  hr {
+    background-color: $middlegrey;
+    border: none;
+    width: 25%;
+    height: 1px;
+    margin: 2.5dvh auto;
+  }
+}
+
+.logo {
+  color: $red;
+  text-align: center;
+  font-family: Koulen;
+  font-size: 1.5rem;
+  margin: 1dvh 1dvw;
+
+  i {
+    font-family: Jost;
+    font-style: italic;
+    font-weight: 100;
+    color: $middlegrey; // $black;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    margin: 10dvh 20dvw;
+  }
+}
