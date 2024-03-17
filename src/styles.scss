@@ -40,10 +40,21 @@ main {
 
   input {
     height: 4dvh;
-    border-radius: 8px;
-    border: $lightgrey 1px solid;
+    // border-radius: 8px;  
+    border: 0 solid;
+    border-bottom: 1px solid;
     margin: 1dvh 0;
     // padding: 0 1dvw;
+    
+  }
+
+  .label-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input:focus{
+    outline: none;
   }
 
   button {
@@ -58,6 +69,48 @@ main {
     margin-top: 1dvh;
     text-align: left;
   }
+
+  .address-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      input#address {
+        width: 20rem;
+    }
+    input#number {
+      width: 4rem;
+    }
+   
+
+}
+    
+  }
+  .register-address {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      input#city{
+        width: 20rem;
+      }
+      input#zipcode{
+        width: 4rem;
+      }
+    }
+   
+  }
+  
+
 }
 
 #connection {

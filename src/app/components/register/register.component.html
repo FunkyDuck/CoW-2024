@@ -1,22 +1,42 @@
 <div class="logo">
     STUD<i>Shareat</i>
-  </div>
-  
-  <form id="register">
+</div>
+
+<form id="register">
     <h1>Create an account</h1>
-    
+    <p>Join us today !</p>
+
     <label for="firstname">Firstname</label>
-    <input type="text" name="firstname" id="firstname" aria-label="firstname">
-    <input type="email" name="email" id="email" placeholder="barack.afritt@stud.be" aria-label="email" required >
-    <input type="password" name="password" id="password" placeholder="password" aria-label="password" required >
-  
-    <button type="button">Create</button>
-  </form>
-  
-  <section class="separator">
-    <hr />
-    <p>Or login</p>
-    <hr />
-  </section>
-  
-  <button type="button">Connection</button>
+    <input type="text" name="firstname" id="firstname" aria-label="firstname" required>
+    <label for="lastname">Lastname</label>
+    <input type="text" name="lastname" id="lastname" aria-label="lastname" required>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="" aria-label="email" required>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" aria-label="password" required>
+    <label for="birthday">Birthday</label>
+    <input type="date" name="birthday" id="birthday" aria-label="birthday" required>
+    <div class="address-container">
+        <div>
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address" aria-label="address" required>
+        </div>
+        <div>
+            <label for="number">Number</label>
+            <input type="text" name="number" id="number" aria-label="number" required>
+        </div>
+    </div>
+    <div class="register-address">
+        <div class="label-container">
+            <label for="city">City</label>
+            <input type="text" name="city" id="city" aria-label="city" required>
+        </div>
+        <div class="label-container">
+            <label for="zipcode">ZIP code</label>
+            <input type="text" name="zipcode" id="zipcode" aria-label="aria-label" required>
+        </div>
+    </div>
+    <label for="phonenumber">Phonenumber</label>
+    <input type="tel" name="phonenumber" id="phonenumber" aria-label="phonenumber" required>
+    <button type="button">Sign up</button>
+</form>
