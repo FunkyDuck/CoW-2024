@@ -27,4 +27,8 @@ export class UsersService {
   login(data: any): any {
     return this.http.post(this.url + 'login', data, this.httpOptions());
   }
+
+  isConnected(): boolean {
+    return false;
+  }
 }

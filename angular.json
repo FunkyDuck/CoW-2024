@@ -54,9 +54,11 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/assets/backgrounds"
+              "src/assets/backgrounds",
+              "src/assets/icons"
             ],
             "styles": [
+              "./node_modules/leaflet/dist/leaflet.css",
               "src/styles.scss"
             ],
             "scripts": []

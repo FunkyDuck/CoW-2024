@@ -32,7 +32,8 @@ export class LoginComponent implements OnInit, OnDestroy {
     if(!this.alertEmail && !this.alertPassword){
       this._usr.login({email: email, password: password}).subscribe(
         (res: any)=>{
-          console.log(res);
+          localStorage.setItem('access_token', res.access_token);
+          this._router.navigateByUrl('/home');
         },
         (err: any)=>{
           console.error(err);

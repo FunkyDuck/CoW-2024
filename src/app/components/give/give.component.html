@@ -1,1 +1,35 @@
-<p>give works!</p>
+<nav>
+  <span>J'offre</span>
+  <a routerLink='/home'>Je récupère</a>
+</nav>
+
+<form>
+  <label for="name">Nom</label>
+  <input type="text" name="name" id="name" required>
+
+  <label for="description">Description</label>
+  <input type="text" name="description" id="description" required>
+
+  <label for="food_category_id">Catégorie</label>
+  <select name="food_category_id" id="food_category_id">
+    <option value="1">Fruits</option>
+    <option value="2">Légumes</option>
+    <option value="3">Viandes</option>
+    <option value="4">Poissons</option>
+    <option value="5">Laitages</option>
+    <option value="6">Féculents</option>
+    <option value="7">Extras</option>
+  </select>
+
+  <label for="diet">Régime alimentaire</label>
+  <select name="diet" id="diet">
+    <option value="Omnivore">Omnivore</option>
+    <option value="Végétarien">Végétarien</option>
+    <option value="Végétalien">Végétalien</option>
+    <option value="Hallal">Hallal</option>
+  </select>
+
+  <div id="map-mini"></div>
+
+  <button type="button">Offrir</button>
+</form>

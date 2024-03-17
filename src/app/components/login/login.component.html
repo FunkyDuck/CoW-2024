@@ -3,22 +3,22 @@
     STUD<i>Shareat</i>
   </div>
 
-  <h1>Connection to the app</h1>
-  <p>Sign-in with your email</p>
+  <h1>Connexion à l'app</h1>
+  <p>Connectez-vous avec votre email</p>
 
-  <p *ngIf='alertConnection' class="alert-red">Email and password not matching</p>
-  <p *ngIf='alertEmail' class="alert-red">Email missing</p>
+  <p *ngIf='alertConnection' class="alert-red">Email ou mot de passe incorrect</p>
+  <p *ngIf='alertEmail' class="alert-red">Email manquant</p>
   <input type="email" name="email" id="email" placeholder="emma.yonnaise@stud.be" aria-label="email" required >
-  <p *ngIf='alertPassword' class="alert-red">Password missing</p>
+  <p *ngIf='alertPassword' class="alert-red">Password manquant</p>
   <input type="password" name="password" id="password" placeholder="password" aria-label="password" required >
 
-  <button type="button" (click)="login()">Connection</button>
+  <button type="button" (click)="login()">Connexion</button>
 </form>
 
 <section class="separator">
   <hr />
-  <p>Or create an account</p>
+  <p>Ou créer un compte</p>
   <hr />
 </section>
 
-<button type="button" (click)="register()">New user</button>
+<button type="button" (click)="register()">Nouvel utilisateur</button>
