@@ -16,110 +16,89 @@ $middlegrey: #828282;
 // Style
 body {
   font-family: Inter;
+  overflow: hidden;
+}
+
+body#bdlogin{
+  background-image: url('./assets/backgrounds/bg_connect.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body#bdregister{
+  background-image: url('./assets/backgrounds/bg_register.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 main {
   margin: 10dvh 2dvw;
-}
 
-
-#register {
-  margin-top: 10dvh;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-
-  h1 {
-    font-size: 1.1rem;
-    font-weight: bold;
-  }
-
-  p {
-    margin-top: 0;
-  }
-
-  input {
-    height: 4dvh;
-    // border-radius: 8px;  
-    border: 0 solid;
-    border-bottom: 1px solid;
-    margin: 1dvh 0;
-    // padding: 0 1dvw;
-    
-  }
-
-  .label-container {
+  form {
     display: flex;
     flex-direction: column;
-  }
 
-  input:focus{
-    outline: none;
+    input {
+      border: none;
+      border-bottom: $black 1px solid;
+      height: 4dvh;
+    }
   }
 
   button {
-    background: $black;
-    color: $white;
-  }
-
-  label {
-    font-size: 0.9rem;
-    font-weight: bold;
+    height: 4dvh;
+    width: 100%;
+    border-radius: 8px;
+    border:none;
+    margin: 1dvh 0;
+    background: $lightgrey;
     color: $black;
-    margin-top: 1dvh;
-    text-align: left;
   }
-
-  .address-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    
-
-    div {
-      display: flex;
-      flex-direction: column;
-
-      input#address {
-        width: 20rem;
-    }
-    input#number {
-      width: 4rem;
-    }
-   
 
 }
-    
-  }
-  .register-address {
+
+#register {
+  margin: 1dvh 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+
+  section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 10dvh;
 
-    div {
-      display: flex;
-      flex-direction: column;
-
-      input#city{
-        width: 20rem;
-      }
-      input#zipcode{
-        width: 4rem;
-      }
+    p, h1, a {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      vertical-align: center;
+      text-decoration: none;
     }
-   
+
+    label {
+      font-family: Jost;
+      font-weight: 600;
+    }
+
+    button {
+      margin-top: 25dvh;
+    }
   }
-  
+
 
 }
 
 #connection {
-  margin-top: 10dvh;
+  margin-top: 22.5dvh;
   text-align: center;
   display: flex;
   flex-direction: column;
 
   h1 {
+    margin: 0;
     font-size: 1.1rem;
     font-weight: bold;
   }
@@ -141,17 +120,6 @@ main {
     color: $white;
   }
 }
-
-button {
-  height: 4dvh;
-  width: 100%;
-  border-radius: 8px;
-  border:none;
-  margin: 1dvh 0;
-  background: $lightgrey;
-  color: $black;
-}
-
 .separator {
   display: flex;
   flex-direction: row;
@@ -172,8 +140,8 @@ button {
   color: $red;
   text-align: center;
   font-family: Koulen;
-  font-size: 1.5rem;
-  margin: 1dvh 1dvw;
+  font-size: 3rem;
+  //margin: 1dvh 1dvw;
 
   i {
     font-family: Jost;

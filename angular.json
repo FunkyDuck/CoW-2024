@@ -53,7 +53,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/backgrounds"
             ],
             "styles": [
               "src/styles.scss"

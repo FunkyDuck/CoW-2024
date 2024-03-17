@@ -1,42 +1,49 @@
-<div class="logo">
-    STUD<i>Shareat</i>
-</div>
-
 <form id="register">
-    <h1>Create an account</h1>
-    <p>Join us today !</p>
+  <section class="head">
+    <a routerLink="/login"><</a>
+    <h1>Créer un compte</h1>
+    <p></p>
+  </section>
 
-    <label for="firstname">Firstname</label>
-    <input type="text" name="firstname" id="firstname" aria-label="firstname" required>
-    <label for="lastname">Lastname</label>
-    <input type="text" name="lastname" id="lastname" aria-label="lastname" required>
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email" placeholder="" aria-label="email" required>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" aria-label="password" required>
-    <label for="birthday">Birthday</label>
-    <input type="date" name="birthday" id="birthday" aria-label="birthday" required>
-    <div class="address-container">
-        <div>
-            <label for="address">Address</label>
-            <input type="text" name="address" id="address" aria-label="address" required>
-        </div>
-        <div>
-            <label for="number">Number</label>
-            <input type="text" name="number" id="number" aria-label="number" required>
-        </div>
-    </div>
-    <div class="register-address">
-        <div class="label-container">
-            <label for="city">City</label>
-            <input type="text" name="city" id="city" aria-label="city" required>
-        </div>
-        <div class="label-container">
-            <label for="zipcode">ZIP code</label>
-            <input type="text" name="zipcode" id="zipcode" aria-label="aria-label" required>
-        </div>
-    </div>
-    <label for="phonenumber">Phonenumber</label>
-    <input type="tel" name="phonenumber" id="phonenumber" aria-label="phonenumber" required>
-    <button type="button">Sign up</button>
+
+  <span *ngIf="alertFirstname" class="alert-red">Veuillez indiquer un prénom</span>
+    <label for="firstname">Prénom</label>
+    <input type="text" name="firstname" id="firstname" required>
+
+  <span *ngIf="alertLastname" class="alert-red">Veuillez indiquer un nom</span>
+    <label for="lastname">Nom</label>
+    <input type="text" name="lastname" id="lastname" required>
+
+  <span *ngIf="alertUsername" class="alert-red">Veuillez indiquer un nom d'utilisateur</span>
+    <label for="username">Nom d'utilisateur</label>
+    <input type="text" name="username" id="username" required>
+
+    <span *ngIf="alertEmail" class="alert-red">Veuillez indiquer un email</span>
+    <label for="email">Adresse email</label>
+    <input type="email" name="email" id="email" required>
+
+    <span *ngIf="alertPassword" class="alert-red">Veuillez indiquer un mot de passe</span>
+    <label for="password">Mot de passe</label>
+    <input type="password" name="password" id="password" required>
+
+  <span *ngIf="alertBirthdate" class="alert-red">Veuillez indiquer une date de naissance</span>
+    <label for="birthdate">Date de naissance</label>
+    <input type="date" name="birthdate" id="birthdate" required>
+
+  <span *ngIf="alertStreet || alertNumber" class="alert-red">Veuillez indiquer une adresse</span>
+    <label for="street">Rue</label>
+    <input type="text" name="street" id="street" required>
+
+    <label for="streetnumber">Numero</label>
+    <input type="number" name="streetnumber" id="streetnumber">
+
+  <span *ngIf="alertCity" class="alert-red">Veuillez indiquer une ville</span>
+    <label for="city">Ville</label>
+    <input type="text" name="city" id="city" required>
+
+  <span *ngIf="alertZip" class="alert-red">Veuillez indiquer un code postal</span>
+  <label for="zip">Code postal</label>
+  <input type="text" name="zip" id="zip" required>
+
+  <button type="button" (click)="register()">Inscription</button>
 </form>
